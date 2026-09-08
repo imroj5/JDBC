@@ -19,6 +19,7 @@ public class Main {
             // Connect to MySQL
             Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected!");
+            System.out.println("does the repo is connected to this");
             connection.setAutoCommit(false);
 
        String debit_query="UPDATE accounts SET balance = balance-? WHERE accountNO=? ";
@@ -31,10 +32,10 @@ public class Main {
             System.out.println("enter amount=");
           double amount= scanner.nextDouble();
 
-debitpreparedStatement.setDouble(1,amount);
+debitpreparedStatement.setDouble(1,500);
 debitpreparedStatement.setInt(2,101);
 
-creditpreparedStatement.setDouble(1,amount);
+creditpreparedStatement.setDouble(1,200);
 creditpreparedStatement.setInt(2,102);
 
             int rowsAffected1 = debitpreparedStatement.executeUpdate();
