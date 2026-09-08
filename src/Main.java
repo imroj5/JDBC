@@ -19,7 +19,7 @@ public class Main {
             // Connect to MySQL
             Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected!");
-            System.out.println("checking the second method ");
+            System.out.println("check the second method ");
 
             connection.setAutoCommit(false);
 
