@@ -19,7 +19,8 @@ public class Main {
             // Connect to MySQL
             Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected!");
-            System.out.println("does the repo is connected to this");
+            System.out.println("check the second method ");
+
             connection.setAutoCommit(false);
 
        String debit_query="UPDATE accounts SET balance = balance-? WHERE accountNO=? ";
@@ -41,9 +42,6 @@ creditpreparedStatement.setInt(2,102);
             int rowsAffected1 = debitpreparedStatement.executeUpdate();
 int rowsAffected2 = creditpreparedStatement.executeUpdate();
 
-
-
-
             connection.close();
 
         } catch (Exception e) {
@@ -53,3 +51,5 @@ int rowsAffected2 = creditpreparedStatement.executeUpdate();
         }
     }
 }
+
+
